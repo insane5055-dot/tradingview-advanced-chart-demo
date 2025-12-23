@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Advanced Trading Chart Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Lightweight Charts (TradingView Engine) -->
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0e1117;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            padding: 10px;
+            text-align: center;
+            background: #161b22;
+        }
+        #chart {
+            height: 90vh;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h2>📈 TradingView Advanced Chart – Demo</h2>
+    <p>Candlestick Chart Integration Sample</p>
+</header>
+
+<div id="chart"></div>
+
+<script>
+    const chart = LightweightCharts.createChart(
+        document.getElementById('chart'),
+        {
+            layout: {
+                background: { color: '#0e1117' },
+                textColor: '#d1d4dc',
+            },
+            grid: {
+                vertLines: { color: '#2a2e39' },
+                horzLines: { color: '#2a2e39' },
+            },
+            crosshair: { mode: 1 },
+            timeScale: { borderColor: '#71649c' },
+            rightPriceScale: { borderColor: '#71649c' },
+        }
+    );
+
+    const candleSeries = chart.addCandlestickSeries({
+        upColor: '#26a69a',
+        downColor: '#ef5350',
+        borderUpColor: '#26a69a',
+        borderDownColor: '#ef5350',
+        wickUpColor: '#26a69a',
+        wickDownColor: '#ef5350',
+    });
+
+    candleSeries.setData([
+        { time: '2024-01-01', open: 100, high: 110, low: 95, close: 105 },
+        { time: '2024-01-02', open: 105, high: 115, low: 100, close: 110 },
+        { time: '2024-01-03', open: 110, high: 120, low: 108, close: 115 },
+        { time: '2024-01-04', open: 115, high: 118, low: 105, close: 108 },
+        { time: '2024-01-05', open: 108, high: 125, low: 107, close: 122 },
+    ]);
+</script>
+
+</body>
+</html>
