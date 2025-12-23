@@ -22,7 +22,7 @@ This implementation is intended **for evaluation and integration review only**.
 - Responsive web layout
 
 ## 🌐 Live Demo
-👉 https://YOUR_USERNAME.github.io/REPO_NAME/
+👉 [https://YOUR_USERNAME.github.io/REPO_NAME/](https://insane5055-dot.github.io/tradingview-advanced-chart-demo/)
 
 ## 🛠 Technology Stack
 - HTML5
