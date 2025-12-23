@@ -1,3 +1,5 @@
+![Chart Preview](assets/preview.png)
+
 # Advanced Market Chart – TradingView Integration Demo
 
 This repository demonstrates a **web-based advanced financial chart**
